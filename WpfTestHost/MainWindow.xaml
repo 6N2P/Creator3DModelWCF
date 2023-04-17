@@ -1,0 +1,68 @@
+﻿<Window x:Class="WpfTestHost.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTestHost"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Высота"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="16"/>
+        <TextBlock Text="Ширина"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="16"/>
+        <TextBlock Text="Толшина"
+                   Grid.Row="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="16"/>
+        <TextBlock Text="Результат"
+                   Grid.Row="3"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="16"/>
+        <TextBlock x:Name="tBlockResult"
+                   Text="Результат"
+                   Grid.Column="1"
+                   Grid.Row="3"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="16"/>
+        <TextBox x:Name="tbWidth"
+                 Grid.Column="1"
+                 Grid.Row="0"
+                 Width="100"
+                 Height="20"/>
+        <TextBox x:Name="tbHeight"
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 Width="100"
+                 Height="20"/>
+        <TextBox x:Name="tbThickness"
+                 Grid.Column="1"
+                 Grid.Row="2"
+                 Width="100"
+                 Height="20"/>
+        <Button Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Margin="5"
+                Content="Создать"
+                Width="200"/>
+    </Grid>
+</Window>
