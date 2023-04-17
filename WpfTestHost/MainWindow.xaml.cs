@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +24,12 @@ namespace WpfTestHost
         public MainWindow()
         {
             InitializeComponent();
+            using(var host = new ServiceHost(typeof(Creator3DModel.Creator)))
+            {
+                host.Open();
+                MessageBox.Show("Host started...");
+
+            }
         }
     }
 }
